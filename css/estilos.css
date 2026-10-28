@@ -63,7 +63,6 @@ footer.mainFooter{
 	text-align: center;
 	padding: 20px 0;
 }
-
 /* ------------Estilos del login de la app ------------ */
 body.bodylogin{
     display: flex;
@@ -73,6 +72,9 @@ body.bodylogin{
     background: url('../images/background\ V2.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    
+    /* Transicion/Animacion*/
+    transition: background 0.5s ease;
 }
 
 .wrapper{
@@ -137,6 +139,7 @@ body.bodylogin{
 }
 .remember-forgot a:hover{
     text-decoration: underline;
+    text-decoration-color: red;
 }
 .wrapper .btn{
     width: 100%;
@@ -150,6 +153,13 @@ body.bodylogin{
     cursor: pointer;
     font-size: 18px;
     font-weight: 600;
+    
+    /* Transicion/Animacion*/
+    transition: all 0.3s ease-in-out;
+}
+.wrapper .btn:hover{
+    background: red;
+    color: white;
 }
 .wrapper .register-link{
     font-size: 14px;
@@ -175,4 +185,14 @@ body.bodylogin{
 
 .register-link p a:hover{
     text-decoration: underline;
+}
+
+/* =================== Media Queries - Taller ================= */
+
+@media (max-width: 800px) {
+    body.bodylogin { background: url('../images/backgroundFi.jpg') no-repeat; }
+}
+
+@media (max-width: 450px) {
+    body.bodylogin { background: #333; }
 }
